@@ -15,22 +15,52 @@ let appData = {
 
 
 for (let i = 0; i < 2; i++) {
-    let a = prompt("Введите обязательную статью расходов в этом месяце", " "),
-        b = prompt("Во сколько это обойдется?", " ");
-    if ((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length < 50) {
+    let a = prompt ("Введите обязательную статью расходов в этом месяце", ""),
+        b = prompt("Во сколько это обойдется?", "");
+    if ( typeof(a) === 'string' && typeof(a) != null && typeof(b) != null && a != '' && b != '' && a.length < 50) {
         console.log("Все получилось");
         appData.expenses[a] = b;
     } else {
         console.log("Вы ввели что то не то");
         i--;
     }
-}
+};
+
+// let i = 0;
+// while ( i < 2 ) {
+//     let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
+//         b = prompt("Во сколько это обойдется?", "");
+//     if (typeof(a) === 'string' && typeof(a) != null && typeof(b) != null && a != '' && b != '' && a.length < 50) {
+//         console.log("Все получилось");
+//         appData.expenses[a] = b;
+//     } else {
+//         console.log("Вы ввели что то не то");
+//         i--;
+//     }
+//     i++;
+// };
+
+
+// let i = 0;
+// do {
+//     let a = prompt ("Введите обязательную статью расходов в этом месяце", ""),
+//         b = prompt("Во сколько это обойдется?", "");
+//     if ( typeof(a) === 'string' && typeof(a) != null && typeof(b) != null && a != '' && b != '' && a.length < 50) {
+//         console.log("Все получилось");
+//         appData.expenses[a] = b;
+//     } else {
+//         console.log("Вы ввели что то не то");
+//         i--;
+//     }
+//     i++;
+// }
+// while (i < 2);
 
 appData.moneyPerDay = appData.budget / 30;
 
 
 
-alert("Ваш ежудневный бюджет равен " + appData.moneyPerDay);
+alert("Ваш ежедневный бюджет равен " + appData.moneyPerDay);
 
 if(appData.moneyPerDay < 100) {
     console.log("Мало денег");
@@ -41,6 +71,8 @@ if(appData.moneyPerDay < 100) {
 } else {
     console.log("Произошла ошибка");
 };
+
+
 
 
 
